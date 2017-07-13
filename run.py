@@ -161,7 +161,8 @@ class SiteService(NormalBase):
                 handle = web.StaticFileHandler.get_content(target)
                 for i in handle:
                     self.write(i)
-
+                    
+                self.set_header('Cache-Control', 'no-store')
                 self.set_header("Content-Type", mimetypes.guess_type(target)[0] or
                                 'application/octet-stream')
             else:
