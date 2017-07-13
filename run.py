@@ -11,6 +11,9 @@ import requests
 from contextlib import contextmanager
 __author__ = "hellflame"
 
+reload(sys)
+sys.setdefaultencoding('utf8')
+
 PWD = os.path.dirname(__file__)
 routes = []
 
@@ -22,7 +25,7 @@ class Spider(object):
 
     @contextmanager
     def soup(self, target_word):
-        url = self.__html_url + urllib.quote(target_word.replace('/', ''))
+        url = self.__html_url + urllib.quote(target_word.replace('/', '').encode('utf8'))
         try:
             req = requests.get(url, timeout=self.__timeout)
         except requests.Timeout:
@@ -146,8 +149,6 @@ settings = {
         'serve_traceback': True,
         'cookie_secret': '\x0e\xf9\xd4.\xf5\x035\xb8\xd29\xda\xe8L1z0\x0e\x11\xf7\xf9Q\xe9\x06=Rs\xb0\xda\xdab',
         'template_path': PWD,
-        'static': PWD + '/static',
-        "public": PWD + '/public',
         'default_handler_class': NormalBase
     }
 
@@ -161,7 +162,7 @@ class SiteService(NormalBase):
                 handle = web.StaticFileHandler.get_content(target)
                 for i in handle:
                     self.write(i)
-                    
+
                 self.set_header('Cache-Control', 'no-store')
                 self.set_header("Content-Type", mimetypes.guess_type(target)[0] or
                                 'application/octet-stream')
