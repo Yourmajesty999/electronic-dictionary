@@ -8,10 +8,10 @@
 	<link href="https://cdn.bootcss.com/semantic-ui/2.2.10/semantic.min.css" rel="stylesheet">
 	<script type="text/javascript" src="dictionary.js"></script>
 </head>
-<body>
+<body  onload="myCanvas()">
 <div class="container">
-<!--
 
+<!--
 	<div class="cover">
 		<div class="dicCover" >
 			<div class="pages">
@@ -37,29 +37,30 @@
 			<p>Created by my Mr. Miao</p>
 		</div>
 	</div>
+
 -->
 
-
-
-
-<!-- 搜索整体-->
-	<div class="pageCon">
-<!-- 每天的格言-->		
-		<div class="proverb">
-			<p>All of us are in the gutter but someone still look up stars.</p>
-			<p class="author">-- Oscal Wild</p>
+<!-- 翻开的封面-->
+	<div id="openCover">
+	<!-- 翻开的左页-->
+		<div class="openLeft">
+			<!-- 每天的格言-->		
+				<p class="proverb">All of us are in the gutter but someone still look up stars.</p>
+				<p class="author">-- Oscar Wilde</p>
+				<div id="myCanvas"></div>
 		</div>
-<!-- 搜索框 按钮-->
-		<form action="#" method="get">		
+	<!-- 搜索整体-->
+		<div class="pageCon">
+	<!-- 搜索框 按钮-->		
 			<div class="ui icon input">
-	  			<input type="text" placeholder="Search..." id="myWords">
+	  			<input type="text" placeholder="Search..." id="myWords" onkeydown="do_getword(event)">
 	  			<i class="circular search link icon" onclick="getWords()"></i>
 			</div>
-		</form>
-		<!-- translations-->
-		<div id="myDiv"></div>
-		
-	</div>
+			<!-- translations-->
+			<div id="myDiv"></div>
+			
+		</div>
+	</div>	
 </div>	
 </body>
 </html>

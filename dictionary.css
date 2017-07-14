@@ -14,7 +14,6 @@ html,body{
 .cover .dicCover{
 	width: 460px;
 	height: 570px;
-	background-color: #990000;
 	color: white;
 	margin: auto;
 	margin-top: 8px;
@@ -24,7 +23,7 @@ html,body{
 	clip-path: polygon(0% 0%, 100% 0, 97% 12%, 97% 13%, 97% 13%, 100% 23%,100% 100%, 0% 100%);
 	border-right: solid 1px;
 	border-bottom: solid 1px;
-	box-shadow: 8px 8px 5px #888888;
+	box-shadow: 80px 80px 5px #888888;
 
 }
 
@@ -57,19 +56,47 @@ html,body{
 	word-spacing: 4px;
 }
 
+
+
+
 */
+.container #openCover{
+	width: 988px;
+	height: 600px;
+	margin: auto;
+	background: linear-gradient(to right, #ff99cc 0%,#3399ff 30%, #ff99cc 100%);
+
+}
+
+.container .openLeft {
+	display: inline-block;
+	width: 422px;
+	height: 570px;
+	background-color: #fcf9f0;
+	margin-left: 35px;
+	margin-top: 15px;
+	box-shadow: 5px 5px 5px #888888;
+	background: linear-gradient(to left,#a6a6a6 0%,#fcf9f0 3%);
+	
+}
+
 
 .pageCon {
 	width: 500px;
-	height: 600px;
-	background-color: #ffffe6;
+	height: 570px;
+	background-color: #fcf9f0;
 	margin: auto;
-	box-shadow: 8px 8px 5px #888888;
+	margin-top: 15px;
+	display: inline-block;
+	position: absolute;
+	left: 640px;
+	box-shadow: 5px 5px 5px #888888;
+	background: linear-gradient(to right,#a6a6a6 0%,#fcf9f0 2%);
 
 }
 .container .pageCon .ui.icon.input{
-	top: 150px;
-	left: 458px;
+	top: 110px;
+	left: 20px;
 	position: absolute;
 }
 
@@ -78,7 +105,6 @@ html,body{
 	height: 50px;
 	font-size: large;
 
-	
 }
 .container .pageCon .ui.icon.input i{
 	color: violet;
@@ -86,19 +112,44 @@ html,body{
 	font-size: large;
 }
 
-.container .pageCon .proverb p{
+.container .pageCon #myDiv{
+	top: 200px;
+	margin-top: 200px;
+	margin-left: 27px;
+	font-size: 15px;
+	color: black;
+	line-height: 22px;
+}
+
+
+.container #openCover .openLeft .proverb{
 	font-size: 18px;
-	padding-top: 15px;
-	word-break: break-all;
+	padding-top: 30px;
+	line-height: 35px;
+	word-wrap:break-word;
 	word-spacing: 5px;
 	font-family: fantasy;
-	color: #d7b9e8;
+	color: #8e3abd;
+	text-align: center;
 
 }
 
-.container .pageCon .proverb .author {
+.container #openCover .openLeft .author {
 	float: right;
-	margin-right: 5px;
+	margin-right: 10px;
+	color: #674b77;
+	font-size: 18px;
+	font-family: fantasy;
+}
+
+
+#openCover .openLeft #myCanvas img{
+	margin-top: 50px;
+	margin-left: 50px;
+	width: 300px;
+	height: 300px;
+	border-radius: 5px;
+	
 }
 
 
