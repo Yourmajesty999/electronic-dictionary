@@ -2,21 +2,21 @@ html,body{
 	width: 100%;
 	min-height: 100%;
 	margin: 0;
+	padding: 0;
 
 }
-
-.container .cover {
-	width: 100%;
-	height: 700px;
+body,.container{
 	background-color: lavender;
+	height: 700px;
 }
-/*
+/* closed cover*/
 .cover .dicCover{
-	width: 460px;
-	height: 570px;
+	width: 450px;
+	height: 600px;
 	color: white;
 	margin: auto;
-	margin-top: 8px;
+	top: 30px;
+	left: 650px;
 	border-top-left-radius: 50px;
 	border-bottom-left-radius: 4px;
 	background: linear-gradient(to right, #33ccff 0%,#3399ff 12%, #ff99cc 100%);
@@ -24,10 +24,11 @@ html,body{
 	border-right: solid 1px;
 	border-bottom: solid 1px;
 	box-shadow: 80px 80px 5px #888888;
+	position: absolute;
+
 
 }
-
-
+/* closed pages*/
 .cover .dicCover .pages{
 	width: 490px;
 	height: 120px;
@@ -40,7 +41,7 @@ html,body{
 	position: absolute;
 	
 }
-
+/* some information of cover */
 .cover .dicCover h1{
 	top: 220px;
 	margin-left: 38%;
@@ -56,73 +57,100 @@ html,body{
 	word-spacing: 4px;
 }
 
+/* animation */
+.cover .dicCover:hover {
+	opacity: 0;
+}
 
-
-
-*/
-.container #openCover{
-	width: 988px;
-	height: 600px;
-	margin: auto;
-	background: linear-gradient(to right, #ff99cc 0%,#3399ff 30%, #ff99cc 100%);
+.container .open{
+	opacity: 0;
+	transition: 0.6s;
 
 }
 
-.container .openLeft {
+.container .open:hover {
+	opacity: 1;
+
+}
+
+/*open covers */
+
+.container #openCoverLeft{
+	width: 450px;
+	height: 600px;
 	display: inline-block;
-	width: 422px;
+	margin-left: 200px;
+	margin-top: 30px;
+	background: linear-gradient(to left, #33ccff 0%,#3399ff 30%, #ff99cc 100%);
+
+}
+
+.container #openCoverRight{
+	width: 450px;
+	height: 600px;
+	display: inline-block;
+	position: absolute;
+	margin-top: 30px;
+	background: linear-gradient(to right, #33ccff 0%,#3399ff 30%, #ff99cc 100%);
+
+}
+/* open pages*/
+.container .openLeft {
+	width: 425px;
 	height: 570px;
 	background-color: #fcf9f0;
-	margin-left: 35px;
+	margin-left: 26px;
 	margin-top: 15px;
 	box-shadow: 5px 5px 5px #888888;
 	background: linear-gradient(to left,#a6a6a6 0%,#fcf9f0 3%);
 	
 }
 
-
-.pageCon {
-	width: 500px;
+#openCoverRight .pageCon {
+	width: 425px;
 	height: 570px;
 	background-color: #fcf9f0;
 	margin: auto;
 	margin-top: 15px;
-	display: inline-block;
-	position: absolute;
-	left: 640px;
+	margin-right: 25px;
 	box-shadow: 5px 5px 5px #888888;
 	background: linear-gradient(to right,#a6a6a6 0%,#fcf9f0 2%);
 
 }
+
+/* sematic ui input*/
 .container .pageCon .ui.icon.input{
-	top: 110px;
+	top: 90px;
 	left: 20px;
 	position: absolute;
 }
 
 .container .pageCon .ui.input input {
-	width: 450px;
+	width: 390px;
 	height: 50px;
 	font-size: large;
 
 }
+
 .container .pageCon .ui.icon.input i{
 	color: violet;
 	background-color: lavender;
 	font-size: large;
 }
 
+/* translation holder*/
 .container .pageCon #myDiv{
-	top: 200px;
-	margin-top: 200px;
+	width: 385px;
+	margin-top: 160px;
+	position: absolute;
 	margin-left: 27px;
 	font-size: 15px;
 	color: black;
 	line-height: 22px;
 }
 
-
-.container #openCover .openLeft .proverb{
+/*left page information of open */
+.container #openCoverLeft .openLeft .proverb{
 	font-size: 18px;
 	padding-top: 30px;
 	line-height: 35px;
@@ -131,10 +159,11 @@ html,body{
 	font-family: fantasy;
 	color: #8e3abd;
 	text-align: center;
+	margin-right: 5px;
 
 }
 
-.container #openCover .openLeft .author {
+.container #openCoverLeft .openLeft .author {
 	float: right;
 	margin-right: 10px;
 	color: #674b77;
@@ -143,8 +172,8 @@ html,body{
 }
 
 
-#openCover .openLeft #myCanvas img{
-	margin-top: 50px;
+#openCoverLeft .openLeft #myCanvas img{
+	margin-top: 55px;
 	margin-left: 50px;
 	width: 300px;
 	height: 300px;
